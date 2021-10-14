@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="recursos/estilos.css">
+
+        <script src="recursos/funciones.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Formulario de Registro</h1>
+                <p>Registre la informacion rapido y al instante .</p>
+            </div>
+
+        </div>
+        <br>
+
+        <div class="container">
+
+
+            <form name="form1" action="/FormularioG1/Servlet" method="post" onsubmit="return validarForma(this)" >
+                <input type="hidden" name="secreto" value="valorSecreto">
+                <table width="200" id="enfasis-columna">
+                    <caption>Formulario Registro Datos</caption>
+                    <tr>
+                        <td class="columna"> Usuario:(*)</td>
+                        <td > <input class="default" type="text" name="usuario" value="Escribir Usuario" onfocus="this.select()"> </td>
+                    </tr>
+                    <tr>
+                        <td class="columna"> Password:(*)</td>
+                        <td > <input class="default" type="password" name="password"  onfocus="this.select()"> </td>
+                    </tr>
+                    <tr>
+                        <td class="columna"> Lenguajes de programacion:(*)</td>
+                        <td >Java  <input  type="checkbox" name="lenguajes" value="java" > </td>&nbsp;&nbsp;&nbsp;
+
+                        <td >.Net  <input  type="checkbox" name="lenguajes" value="net" > </td>&nbsp;&nbsp;&nbsp;
+                        <td >Php  <input  type="checkbox" name="lenguajes" value="php" > </td>&nbsp;&nbsp;&nbsp;
+                    </tr>
+                    <tr>
+                        <td class="columna">
+                            Genero:(*) 
+
+                        <td>Masculino: <input type="radio" name="genero" value="M"> </td>
+                        &nbsp;&nbsp;&nbsp;
+                        <td>Femenino: <input type="radio" name="genero" value="F"> </td> &nbsp;&nbsp;&nbsp;
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="columna">
+                            Ocupacion:(*) 
+                               
+                                
+                                <td> <select name="ocupacion" class="default">
+                    <option value="">Seleccionar</option>
+                                <option value="1">Programado</option>
+                                <option value="2">Aprendiz</option>
+                                <option value="3">Instructor</option>
+                                <option value="4">Otro</option>
+                                
+                                
+                                
+                            </select>
+                                </td>
+                            
+                        </td>
+                        
+                        
+                            
+                    </tr>
+                    
+                    <tr>
+                        <td class="columna">
+                            Musica Favorita:
+                        </td>
+                        <td> <select name="musica" multiple class="defaul">
+                                <option value="rock">Rock</option>
+                                <option value="pop">Pop</option>
+                                <option value="bachata">Bachata</option>
+                                
+                                
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="columna">
+                            
+                            Comentarios;
+                            
+                        <td><textarea name="comentarios" cols="30" rows="2" class="defaul" onfocus="this.select()">Escriba su comentario</textarea></td>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr style="text-align: center">
+                        <td><input type="reset" value="Limpiar" class="btn btn-danger"></td><!-- comment -->
+                         <td><input type="submit" value="Enviar" class="btn btn-primary 
+                                    "> </td><!-- comment -->
+                    </tr>
+                </table>
+
+
+            </form>
+
+        </div>
+
+    </body>
+</html>
